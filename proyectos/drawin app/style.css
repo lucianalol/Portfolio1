@@ -1,0 +1,69 @@
+ /* Importa la fuente Roboto desde Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        /* Establece estilos globales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para el cuerpo del documento */
+        body {
+            background-color: #f0f0f0; /* Cambia el color de fondo a un gris claro */
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Estilos para el lienzo (canvas) */
+        canvas {
+            border: 3px solid #1ECD97;
+        }
+
+        /* Estilos para la caja de herramientas */
+        .toolbox {
+            background-color: #1ECD97; /* Cambia el color de fondo de la caja de herramientas a un verde más claro */
+            border: 1px solid #1ECD97; /* Cambia el color del borde de la caja de herramientas */
+            display: flex;
+            width: 385px;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        /* Estilos para los botones y controles en la caja de herramientas */
+        .toolbox > * {
+            background-color: #333; /* Cambia el color de fondo de los botones y controles a un gris oscuro */
+            color: white; /* Cambia el color del texto a blanco */
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            height: 50px;
+            width: 50px;
+            margin: 0.25rem;
+            padding: 0.25rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Estilo especial para el botón "Borrar" */
+        #clear {
+            background-color: #333;
+        }
+
+        /* Alinea el botón "Borrar" a la derecha */
+        #clear:last-child {
+            margin-left: auto;
+        }
+
+        /* Estilo para el control de color */
+        input.colorInput {
+            height: 40px;
+            border: none; /* Elimina el borde del control de color */
+            border-radius: 5px;
+        }

@@ -1,0 +1,537 @@
+/* Resetear márgenes y rellenos para evitar estilos predeterminados del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: black;
+    padding-inline: 10px;
+  }
+  
+  /* Estilos para el encabezado
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(235, 16, 16, 0.1);
+    justify-content: space-between;
+    align-items: center;
+  } */
+  .main-menu {
+    
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color);
+    transition: transform 0.3s;
+    transform: translateY(-100%);
+  }
+  
+  .main-menu__item {
+    padding: 1em;
+  }
+  
+  .main-menu__link {
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  /* Menú Tableta/Escritorio */
+.toggle-menu {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  filter: invert(1);
+  width: 40px;
+  z-index: 1;
+  display: block;
+}
+
+.toggle-menu__checkbox {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  width: 40px;
+  opacity: 0;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.toggle-menu__checkbox:checked + .main-menu {
+  transform: translate(0);
+}
+
+@media (min-width: 760px) {
+  .toggle-menu {
+      display: none;
+  }
+
+  .main-menu {
+      flex-direction: row;
+      transform: translateY(0);
+  }
+}
+/* Menú Principal */
+.main-menu--show {
+  transform: translateY(0);
+}
+h2{
+  font-family: 'Lugrasimo', cursive;
+  color: #fff;
+  text-align: center;
+  margin: 20px;
+  
+  text-decoration: none;
+  margin-bottom: 20px;
+  flex-direction: column;
+  padding-top: 10px;
+}
+  h5 {
+    font-family: 'Lugrasimo', cursive;
+    text-align: center;
+    margin: 20px;
+    color: rgb(23, 106, 109);
+    text-decoration: none;
+    margin-bottom: 20px;
+    flex-direction: column;
+    padding-top: 10px;
+    font-size: 24px;
+    color: #888;
+  }
+  h1{
+    font-size: 24px;
+    color: #888;
+  }
+  
+  /* Estilos para la navegación */
+  .nav__ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav__li {
+    display: inline;
+    margin-right: 20px;
+    color: #fff;
+    display: inline-block;
+  }
+  .nav__li:last-child{
+    margin-right: 0;
+  }
+  .nav__li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  .nav__li a:hover{
+    color:#49c327
+  }
+  
+  /* Estilos para la sección Inicio */
+  .Inicio {
+    padding: 40px;
+    text-align: center;
+  }
+  .section-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ajusta esto según tus necesidades */
+    text-align: center;
+}
+
+/* .section-inicio h1, h5 {
+    margin: 0;
+} */
+.section {
+    font-size: 36px;
+    color: #888;
+    /* background-color: black; */
+    border-radius: 10px;
+  }
+  
+  /* Estilos para los enlaces activos */
+  .active {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+  }
+  .section.Proyectos {
+    background-color: black;
+    padding: 20px;
+    overflow: auto; /* Para manejar el desbordamiento de contenido */
+}
+
+/* Estilos para cada proyecto */
+.section.Proyectos article {
+    /* background-color: black; */
+    border: 1px solid #ddd;
+    
+    margin: 5px; /* Espacio entre los proyectos */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* 33.33% para tres proyectos en una fila */
+   
+}
+
+/* Estilos para la imagen del proyecto */
+.section.Proyectos article img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para el título del proyecto */
+.section.Proyectos article h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Estilos para el enlace del proyecto */
+.section.Proyectos article h2 a {
+    text-decoration: none;
+    color: #7aa2c0; /* Color de enlace de Microsoft Azure */
+}
+
+/* Estilos para la descripción del proyecto */
+.section.Proyectos article p {
+    font-size: 16px;
+    color: #888;
+}
+.section {
+  /* flex-basis: calc(33.33% - 20px); */
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Estilo para el título de la sección */
+.section h1 {
+  font-size: 24px;
+  color: #888;
+  /* border: 5px solid #49c327; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para el párrafo de la sección */
+.section p {
+  font-size: 16px;
+  color: #888;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.section-inicio, #inicio {
+  margin: 20px;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  display: inline-block;
+  /* background-color: #ccc; */
+}
+.titulo1 {
+  color: #888;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 3px solid #49c327;
+  padding: 10px; /* Espaciado alrededor del contenido */
+}
+
+
+/* Estilos para el formulario */
+.contacto{
+  max-width: 800px;
+  margin: auto;
+  margin-top: 5rem;
+}
+.contacto__form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #49c327;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input--email {
+  height: 40px;
+}
+
+.input--text {
+  height: 100px;
+}
+
+/* Estilos para el botón */
+.submit {
+  display: block;
+  margin: 0 auto; /* Centra horizontalmente el botón */
+  background-color: #ccc;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave de color */
+}
+
+.submit:hover, /* Cambio de color cuando se pasa el mouse sobre el botón */
+.input:focus, /* Cambio de color cuando se enfoca en los campos de entrada */
+.submit:focus { /* Cambio de color cuando se enfoca en el botón */
+  background-color: hwb(182 13% 22%);
+  color: #000000;
+}
+
+/* Estilos para los campos de entrada cuando están enfocados */
+.input:focus {
+  border-color: #49c327; /* Cambia el color del borde cuando se enfoca en el campo */
+}
+/* Estilos para los enlaces de redes sociales */
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.icons a {
+  /* background-color: #ccc; */
+  margin: 20px 50px; /* Espacio entre ellos */
+  text-decoration: none; /* Elimina la subrayado de los enlaces */
+  font-size: 24px; 
+  transition: color 0.3s; 
+  fill:#fff;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: #49c327; /* Cambia el color al pasar el mouse (ajusta según sea necesario) */
+}
+.titulos h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #888;
+}
+
+.sectionProyectos {
+  background-color: #ccc;
+  transition: background-color 0.3s; /* Agrega una transición suave */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 20%;
+  max-width: 400px;
+  min-width: 250px;
+  margin: 0 auto; /* Centrar horizontalmente */
+  margin-top: 50px;
+}
+
+.sectionProyectos:hover {
+  background-color: #ffffff; /* Cambia el color al pasar el cursor */
+  color: #000000;
+}
+
+.sectionProyectos img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+}
+form input, form textarea, form button{
+  padding: 20px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  background-color: #ccc;
+}
+form button{
+  background-color: rgb(9, 92, 226);
+  cursor: pointer;
+  color: white;
+}
+form button:hover{
+  background-color: green;
+  color: black;
+}
+.contenedor1{
+  flex-direction: column;
+}
+h1 {
+  font-family: 'Lugrasimo', cursive;
+  text-align: center;
+  margin: 20px;
+  color: #666;
+  text-decoration: none;
+  margin-bottom: 20px;
+  flex-direction: column;
+  padding-top: 10px;
+}
+#Skills{
+  background-color: black;
+  padding: 20px;
+  overflow: auto; /* Para manejar el desbordamiento de contenido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.dado{
+	height: 50rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	perspective: 1000px;
+	background-color: black;
+}
+.lado{
+	height: 300px;
+	width: 300px;
+	animation: girar 4s linear infinite;
+	position: absolute;
+	opacity: 0.9;
+	cursor: pointer;
+	/* background-color: red; */
+}
+@keyframes girar{
+	from{
+		transform: rotateY(360deg) translateZ(150px);
+		z-index: 10;
+	}
+	50%{
+		z-index: -10;
+	}
+	to{
+		transform: rotateY(0) translateZ(150px);
+		z-index: 10;
+	}
+}
+#lado_d{
+	background-image: url(img/js.png);
+	background-size: cover;
+	background-position: center;
+}
+#lado_d:hover{
+	box-shadow: 0px 0px 43px rgba(232, 221, 5, 0.983);
+	-webkit-box-shadow:0px 0px 43px rgba(232, 221, 5, 0.983);
+	-moz-box-shadow:0px 0px 43px rgba(232, 221, 5, 0.983);
+}
+#lado_c{
+	background-image: url(img/java.png);
+	background-size: cover;
+	background-position: center;
+	animation-delay: -1s;
+}
+#lado_c:hover{
+	box-shadow: 0px 0px 43px rgba(0, 8, 255, 0.983);
+	-webkit-box-shadow:0px 0px 43px rgba(0, 8, 255, 0.983);
+	-moz-box-shadow:0px 0px 43px rgba(0, 8, 255, 0.983);
+}
+#lado_b{
+	background-image: url(img/htmlcss.png);
+	background-size: cover;
+	background-position: center;
+	animation-delay: -2s;
+}
+#lado_b:hover{
+	box-shadow: 0px 0px 43px rgba(28, 188, 216, 0.983);
+	-webkit-box-shadow:0px 0px 43px rgba(28, 188, 216, 0.983);
+	-moz-box-shadow:0px 0px 43px rgba(28, 188, 216, 0.983);
+}
+#lado_a{
+	background-image: url(img/php.png);
+	background-size: cover;
+	background-position: center;
+	animation-delay: -3s;
+}
+#lado_a:hover{
+	box-shadow: 0px 0px 43px rgba(174, 11, 11, 0.983);
+	-webkit-box-shadow:0px 0px 43px rgba(174, 11, 11, 0.983);
+	-moz-box-shadow:0px 0px 43px rgba(174, 11, 11, 0.983);
+}
+.lado_2{
+	height: 300px;
+	width: 300px;
+	animation: girar_2 4s linear infinite;
+	position: absolute;
+}
+@keyframes girar_2{
+	from{
+		transform: rotateY(360deg) rotateX(90deg);
+	}
+	to{
+		transform: rotateY(0deg) rotateX(90deg);
+	}
+}
+#lado_e{
+	background-color: rgb(24, 27, 206);
+	margin-bottom: 300px;
+}
+#lado_f{
+	background-color: rgb(24, 27, 206);
+	margin-top: 300px;
+}
+.section-sobremi #Sobremi{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.aboutme {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #ccc;
+  font-size: 16px;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
