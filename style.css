@@ -25,7 +25,10 @@
     align-items: center;
   } */
   .main-menu {
-    
+    position: fixed; /* Fija el menú en la parte superior de la pantalla */
+    top: 0; /* Lo coloca en la parte superior de la ventana */
+    left: 0; /* Alinea el menú a la izquierda de la ventana */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
     list-style: none;
     margin-top: 0;
     margin-bottom: 0;
@@ -33,10 +36,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color);
+    /* background-color: var(--color); */
     transition: transform 0.3s;
-    transform: translateY(-100%);
+    transform: translateY(0); /* Establece la posición inicial en la parte superior */
   }
+  
   
   .main-menu__item {
     padding: 1em;
@@ -90,7 +94,7 @@
   transform: translateY(0);
 }
 h2{
-  font-family: 'Lugrasimo', cursive;
+  font-family: 'Roboto', sans-serif;
   color: #fff;
   text-align: center;
   margin: 20px;
@@ -101,7 +105,7 @@ h2{
   padding-top: 10px;
 }
   h5 {
-    font-family: 'Lugrasimo', cursive;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     margin: 20px;
     color: rgb(23, 106, 109);
@@ -168,7 +172,7 @@ h2{
   .section:hover  {
     /* background-color: white; */
     cursor: pointer;
-    color: #000000;
+    /* color: #000000; */
     /* box-shadow: #49c327; */
   }
   
@@ -414,7 +418,7 @@ form button:hover{
   flex-direction: column;
 }
 h1 {
-  font-family: 'Lugrasimo', cursive;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   margin: 20px;
   color: #666;
@@ -522,11 +526,11 @@ h1 {
 	}
 }
 #lado_e{
-	background-color: rgb(24, 27, 206);
+	background-color: rgb(255, 255, 255);
 	margin-bottom: 300px;
 }
 #lado_f{
-	background-color: rgb(24, 27, 206);
+	background-color: rgb(255, 255, 255);
 	margin-top: 300px;
 }
 .section-sobremi #Sobremi{
