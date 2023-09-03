@@ -161,9 +161,15 @@ h2{
 } */
 .section {
     font-size: 36px;
-    color: #888;
+    /* color: red; */
     /* background-color: black; */
     border-radius: 10px;
+  }
+  .section:hover  {
+    /* background-color: white; */
+    cursor: pointer;
+    color: #000000;
+    /* box-shadow: #49c327; */
   }
   
   /* Estilos para los enlaces activos */
@@ -334,23 +340,28 @@ h2{
 }
 
 .icons a {
-  /* background-color: #ccc; */
-  margin: 20px 50px; /* Espacio entre ellos */
-  text-decoration: none; /* Elimina la subrayado de los enlaces */
+  margin: 20px 50px; 
+  text-decoration: none; 
   font-size: 24px; 
-  transition: color 0.3s; 
-  fill:#fff;
+  transition: fill color 0.3s; 
+  fill:#888;
   text-decoration: none;
+
 }
 
-.icons a:hover {
-  color: #49c327; /* Cambia el color al pasar el mouse (ajusta según sea necesario) */
-}
+/* .icons a:hover {
+  fill: black;
+} */
 .titulos h1 {
   display: flex;
   justify-content: center;
   text-align: center;
   color: #888;
+}
+.titulos h1:hover{
+  /* background-color: red; */
+  border-radius: 20px;
+  /* color: black; */
 }
 
 .sectionProyectos {
