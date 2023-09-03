@@ -5,7 +5,7 @@
     box-sizing: border-box;
   }
   body{
-    background-color: black;
+    background-image: url(estrellado.jpeg);
     padding-inline: 10px;
   }
   
@@ -52,6 +52,20 @@
     text-transform: uppercase;
     text-decoration: none;
   }
+  @media (max-width: 768px) {
+    .main-menu {
+        flex-direction: row;
+        justify-content: space-around; /* Espaciado uniforme entre elementos */
+        align-items: center;
+        background-color: var(--color); /* Agrega el fondo de color para el menú */
+        transform: translateY(-100%);
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    }
+
+    .main-menu__item {
+        padding: 0.5em;
+    }
+}
   
   /* Menú Tableta/Escritorio */
 .toggle-menu {
@@ -428,7 +442,8 @@ h1 {
   padding-top: 10px;
 }
 #Skills{
-  background-color: black;
+  background-image: url(estrellado.jpeg);
+  background-size: 100%;
   padding: 20px;
   overflow: auto; /* Para manejar el desbordamiento de contenido */
   display: flex;
@@ -444,7 +459,7 @@ h1 {
 	align-items: center;
 	position: relative;
 	perspective: 1000px;
-	background-color: black;
+	/* background-color: black; */
 }
 .lado{
 	height: 300px;

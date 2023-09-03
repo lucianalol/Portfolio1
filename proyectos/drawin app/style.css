@@ -1,16 +1,16 @@
- /* Importa la fuente Roboto desde Google Fonts */
+ 
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         
-        /* Establece estilos globales */
+        
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        /* Estilos para el cuerpo del documento */
+        
         body {
-            background-color: #f0f0f0; /* Cambia el color de fondo a un gris claro */
+            background-color: black; 
             font-family: 'Roboto', sans-serif;
             display: flex;
             flex-direction: column;
@@ -19,7 +19,7 @@
             height: 100vh;
         }
 
-        /* Estilos para el lienzo (canvas) */
+        
         canvas {
             border: 3px solid #1ECD97;
         }
